@@ -56,7 +56,7 @@ app.post('/buscar-telefono',  bodyParser.json(), (req, res) => {
     }
   }else{
     if(sucursalEncontrada[ubicacion] && sucursalEncontrada[ubicacion][sucursal]){
-      return res.json({ telefono: sucursalEncontrada[ubicacion].telefono });
+      return res.json({ telefono: sucursalEncontrada[ubicacion][sucursal].telefono });
     } else {
       return res.status(404).json({ mensaje: 'No se encontró coincidencia' });
     }
