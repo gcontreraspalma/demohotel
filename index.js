@@ -49,14 +49,14 @@ app.post('/buscar-telefono',  bodyParser.json(), (req, res) => {
   }
 
   if(sucursal === "" || !sucursal){
-    if(sucursalEncontra[ubicacion]){
-      return res.json({ telefono: sucursalEncontra[ubicacion].telefono });
+    if(sucursalEncontrada[ubicacion]){
+      return res.json({ telefono: sucursalEncontrada[ubicacion].telefono });
     } else {
       return res.status(404).json({ mensaje: 'No se encontró coincidencia' });
     }
   }else{
-    if(sucursalEncontra[ubicacion] && sucursalEncontra[ubicacion][sucursal]){
-      return res.json({ telefono: sucursalEncontra[ubicacion].telefono });
+    if(sucursalEncontrada[ubicacion] && sucursalEncontrada[ubicacion][sucursal]){
+      return res.json({ telefono: sucursalEncontrada[ubicacion].telefono });
     } else {
       return res.status(404).json({ mensaje: 'No se encontró coincidencia' });
     }
