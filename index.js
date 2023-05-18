@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const datosSucursales = {
   "Explorean": {
     "Celestún":{
-      "telefono": 523338809200
+      "telefono": 529889162100
     }, 
     "Cozumel":{
       "telefono": 529878729600
