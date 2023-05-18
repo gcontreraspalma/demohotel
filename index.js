@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
 
 // Objeto que contiene los datos y números de teléfono
 const datosSucursales = {
