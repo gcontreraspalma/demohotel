@@ -33,7 +33,7 @@ const datosSucursales = {
 app.get('/', (req, res) => {
   return res.status(200).json({'status': 'alive?'})
 })
-app.post('/buscar-telefono', (req, res) => {
+app.post('/buscar-telefono',  bodyParser.json(), (req, res) => {
   
   console.log(req.body)
   const { nombre, ubicacion, sucursal } = req.body;
