@@ -34,8 +34,9 @@ app.get('/', (req, res) => {
   return res.status(200).json({'status': 'alive?'})
 })
 app.post('/buscar-telefono', (req, res) => {
-  const { nombre, ubicacion, sucursal } = req.body;
+  
   console.log(req.body)
+  const { nombre, ubicacion, sucursal } = req.body;
   if (!nombre || !ubicacion ) {
     return res.status(400).json({ mensaje: 'Faltan parámetros requeridos' });
   }
