@@ -30,7 +30,7 @@ const datosSucursales = {
 }
 
 // Ruta POST para recibir los parámetros y buscar el número de teléfono
-app.post('/buscar-telefono', (req, res) => {
+app.get('/buscar-telefono', (req, res) => {
   const { nombre, ubicacion, sucursal } = req.body;
   console.log(req.body)
   if (!nombre || !ubicacion ) {
